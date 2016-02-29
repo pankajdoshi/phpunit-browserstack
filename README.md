@@ -8,6 +8,6 @@ You can run parallel as well as single test on the BrowserStack. Follow the step
 
 ###Further Reading
 - [PHPUnit](https://phpunit.de/)
-- [BrowserStack documentation for Automate](https://www.browserstack.com/automate/ruby)
+- [BrowserStack documentation for Automate](https://www.browserstack.com/automate/php)
 
 Happy Testing!
