@@ -1,7 +1,7 @@
 <?php
 require 'vendor/autoload.php';
-define('BROWSERSTACK_USER', '<Set BrowserStack Username>');
-define('BROWSERSTACK_KEY', '<Set BrowserStack Key>');
+define('BROWSERSTACK_USER', 'BROWSERSTACK_USERNAME');
+define('BROWSERSTACK_KEY', 'BROWSERSTACK_KEY');
 class WebTest extends PHPUnit_Extensions_Selenium2TestCase
 {
 	public static $browsers = array(
@@ -12,7 +12,7 @@ class WebTest extends PHPUnit_Extensions_Selenium2TestCase
 			'desiredCapabilities' => array(
 				'version' => '30',
 				'browserstack.user' => BROWSERSTACK_USER,
-				'browserstack.key' => 'XQWDewaJsUzqYJRv8zhr',
+				'browserstack.key' => BROWSERSTACK_KEY,
 				'os' => 'OS X',
 				'os_version' => 'Mountain Lion'		
 			)

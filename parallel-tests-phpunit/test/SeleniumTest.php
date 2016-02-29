@@ -3,8 +3,8 @@ require 'vendor/autoload.php';
 
 class SeleniumTest extends PHPUnit_Framework_TestCase {
 
- protected static $user_id = "<Your Userid>";
- protected static $security_key = "<Your Security Key>";
+ protected static $user_id = "BROWSERSTACK_USERNAME";
+ protected static $security_key = "BROWSERSTACK_KEY";
  
  public function testGoogle() {
   $url = "http://" . self::$user_id . ":" . self::$security_key . "@hub.browserstack.com/wd/hub";

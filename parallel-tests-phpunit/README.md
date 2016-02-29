@@ -80,7 +80,8 @@ class SeleniumTest extends PHPUnit_Framework_TestCase {
 }
 ?> 
 ```
-7. To run this UnitTests in parallel please call following command:
+7. Replace BROWSERSTACK_KEY and BROWSERSTACK_USERNAME with your BrowserStack Username and access key to run the tests. 
+To run this UnitTests in parallel please call following command:
 ```
 vendor/bin/paratest -p 3 -f --phpunit=vendor/bin/phpunit test/SeleniumTest.php 
 ```
