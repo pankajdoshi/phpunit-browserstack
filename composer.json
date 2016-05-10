@@ -1,0 +1,14 @@
+{
+  "require": {
+    "brianium/paratest": "dev-master",
+    "browserstack/local": "dev-master",
+    "phpunit/phpunit-selenium": "dev-master",
+    "facebook/webdriver": "dev-master"
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit tests/SampleSeleniumTest.php",
+    "test_local": "vendor/bin/phpunit tests/LocalSeleniumTest.php",
+    "test_single": "vendor/bin/phpunit tests/SampleSeleniumTest.php",
+    "test_parallel": "vendor/bin/paratest -p 3 -f --phpunit=vendor/bin/phpunit tests/ParallelSeleniumTest.php"
+  }
+}
