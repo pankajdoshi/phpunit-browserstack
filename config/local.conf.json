@@ -1,0 +1,17 @@
+{
+  "server": "hub-cloud.browserstack.com",
+  "port": 80,
+  "user": "BROWSERSTACK_USERNAME",
+  "key": "BROWSERSTACK_ACCESS_KEY",
+
+  "capabilities": {
+    "build": "phpunit-browserstack",
+    "name": "local_test",
+    "browserstack.debug": true,
+    "browserstack.local": true
+  },
+
+  "environments": [{
+    "browser": "chrome"
+  }]
+}

@@ -1,47 +1,20 @@
-# PHPUnit-Browserstack
+# phpunit-browserstack
 
-Run [PHPUnit](https://github.com/sebastianbergmann/phpunit) scripts on BrowserStack.
+[PHPUnit](https://github.com/sebastianbergmann/phpunit) Integration with BrowserStack.
 
-## Usage
+## Setup
 
-### Prerequisites
-
-composer and php
-
-### Clone the repo
-
-`git clone https://github.com/browserstack/phpunit-browserstack.git`
-
-### Install dependencies
-
-Navigate to the root directory for testing and then install the dependencies by running
-
-`composer install`
-
-### BrowserStack Authentication
-
-Export the environment variables for the username and access key of your BrowserStack account.
-These can be found on the automate accounts page on [BrowserStack](https://www.browserstack.com/accounts/automate)
-
-`export BROWSERSTACK_USERNAME=<browserstack-username>`
-
-`export BROWSERSTACK_ACCESS_KEY=<browserstack-access-key>`
+- Clone the repo
+- Install dependencies `composer install`
+- Update `*.conf.json` files inside the `config/` directory with your BrowserStack Username and Access Key. (These can be found in the [settings](https://www.browserstack.com/accounts/settings) section on BrowserStack accounts page)
+- Alternatively, you can export the environment variables for the Username and Access Key of your BrowserStack account. `export BROWSERSTACK_USERNAME=<browserstack-username> && export BROWSERSTACK_ACCESS_KEY=<browserstack-access-key>`
 
 ### Run the tests
 
- - To start a single test run: `composer test` or `composer test_single`
- - To start parallel tests run: `composer test_parallel`
- - To start local tests run: `composer test_local`
+- To run single test, run `composer single`
+- To run parallel tests, run `composer parallel`
+- To run local tests, run `composer local`
 
------
+### Notes
 
-#### Further Reading
-
-- [PHPUnit](https://phpunit.de/)
-- [BrowserStack documentation for Automate](https://www.browserstack.com/automate/php)
-
-#### How to specify the capabilities
-
-The [Code Generator](https://www.browserstack.com/automate/node#setting-os-and-browser) can come in very handy when specifying the capabilities especially for mobile devices.
-
-Happy Testing!
+- In order to test on different set of browsers, check out our [code generator](https://www.browserstack.com/automate/python#setting-os-and-browser)

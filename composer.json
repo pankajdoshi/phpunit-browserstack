@@ -1,14 +1,16 @@
 {
   "require": {
-    "brianium/paratest": "dev-master",
-    "browserstack/local": "dev-master",
-    "phpunit/phpunit-selenium": "dev-master",
+    "browserstack/browserstack-local": "dev-master",
+    "phpunit/phpunit-selenium": "*",
     "facebook/webdriver": "dev-master"
   },
   "scripts": {
-    "test": "vendor/bin/phpunit tests/SampleSeleniumTest.php",
-    "test_local": "vendor/bin/phpunit tests/LocalSeleniumTest.php",
-    "test_single": "vendor/bin/phpunit tests/SampleSeleniumTest.php",
-    "test_parallel": "vendor/bin/paratest -p 3 -f --phpunit=vendor/bin/phpunit tests/ParallelSeleniumTest.php"
+    "test": "composer test single && composer test local && composer test parallel",
+    "single": "vendor/bin/phpunit tests/single_test.php",
+    "local": "CONFIG_FILE=config/local.conf.json vendor/bin/phpunit tests/local_test.php",
+    "parallel": "CONFIG_FILE=config/parallel.conf.json /usr/bin/env php lib/parallel.php"
+  },
+  "autoload": {
+    "classmap": ["lib/"]
   }
 }
